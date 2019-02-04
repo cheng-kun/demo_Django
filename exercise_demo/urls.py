@@ -19,7 +19,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path(r'api_demo/', views.api_demo),
+    url(r'api_demo/', views.api_demo),
     url(r'^$', views.search_form),
     url(r'^search$', views.search),
 ]
