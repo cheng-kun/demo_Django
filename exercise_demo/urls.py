@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from . import search
+from . import views
 
 urlpatterns = [
-    url(r'^$', search.search_form),
-    url(r'^search$', search.search)
+    path(r'api_demo/', views.api_demo),
+    url(r'^$', views.search_form),
+    url(r'^search$', views.search),
 ]
